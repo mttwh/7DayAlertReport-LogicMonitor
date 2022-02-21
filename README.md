@@ -4,15 +4,22 @@ The function named "PushAlertsToBlobEnv" is used to grab the past 7 days of aler
 
 - This runs on a timer trigger at 9AM everyday and refreshes the data in Azure Blob. Then Power BI pulls data from the blob at 930AM everyday to refresh the report
 
-The credentials and LM portal name (used to query the API) are stored in Azure in the Function App application settings as environment variables, where they can be used in the script.
+This will get the alert data for multiple LM portals and add them together. The credentials are stored as an environment variable which is a list of JSON objects. Each JSON object represents the information for 1 LM portal
+
+- The JSON object for an LM portal's info has the below values
+
+  - {"lmCompany":"haservices","accessId":"<insert accessID>","accessKey":"<insert access Key>"}
 
 - Grabbing the past 7 days of alerts
   - To grab the past 7 days of alerts, we create 7 reports in LM, one for each day of the week going back 7 days. Then the contents of those reports are read and added to a master list.
   - The reports are then deleted and the list is converted to JSON and pushed to Azure Blob. The previous data is overwritten
 
-# TODO - HTML trigger functions (API calls)
+## Adding a new LM portal into the mix
 
-I still need to document the other 3 functions which are part of this function app. They are HTML triggers, which behave as API calls and return a JSON object with LM alerts.
+If we want to add a new LM portal into this problem management report, then all we need to do is edit the environment variable defined in the function app's application settings
+
+- This environment variable is named "LMPortalInfo" and is a list of JSON objects. Each JSON object represents 1 LM portal
+  - To add a new LM portal, edit the environment variable under the function app and add a new JSON object to the list with the portal name, and API creds of a user with access to view resources/websites, and create/delete reports.
 
 ## Limitation in LogicMonitor API's Alerts resource
 
