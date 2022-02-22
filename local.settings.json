@@ -1,8 +1,0 @@
-{
-  "IsEncrypted": false,
-  "Values": {
-    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=7dayalertreports;AccountKey=Pnld62j20WfZnp463DMkThiUhSRsXpcS4KcAdBKRXXnu4/BUnvh6RRsuHndJmb7v5UA7m4v2d64P+ASt5v9Q1w==;EndpointSuffix=core.windows.net",
-    "FUNCTIONS_WORKER_RUNTIME": "python",
-    "LMPortalInfo": "{ \t\"lmCompany\": \"haservices\", \t\"accessId\": \"VV9Uf6742JRv49I8w4J6\", \t\"accessKey\": \"X59SQT-6y5c%n2hgnMk%-=4Ya[Jbv5}rKz39GU26\" },{\t\"lmCompany\": \"cdillcjkl\", \t\"accessId\": \"VJrnV25H3KU5w369G4uz\", \t\"accessKey\": \"9wd5vt4SI)GwQ2USSM%)^Ln~w^6LdN6N]pI{Q9%7\" },{\t\"lmCompany\": “cdillcsec”, \t\"accessId\": \"9zSFBgdMgxwjU6uk9Q72\", \t\"accessKey\": \")GYiHx^TV5s)^b7K=MNA%-]]MA7~T93{6nFJE6_R\" }"
-  }
-}
