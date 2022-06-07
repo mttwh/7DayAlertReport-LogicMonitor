@@ -142,9 +142,10 @@ def main(mytimer: func.TimerRequest) -> None:
                 client_code = "SEC"
             elif lmCompany == "cdillcagc":
                 client_code = "AGC"
+            elif lmCompany == "cdillcank":
+                client_code = "ANK"
             else:
                 client_code = "Unknown"
-                logging.info("Unable to determine client code")
 
             #append values to dictionary object which represents 1 row on the report.
             temp_dict = {"Severity": severity, "Device": deviceName, "Datasource": datasource, "Instance": instanceName, "Datapoint": datapoint, "Began": began, "Client Code": client_code, "Group": group}
